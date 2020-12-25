@@ -166,7 +166,7 @@ def export2Apollo(output_folder):
   global cloud_files
   global poses
   frame_count=0
-  for key in cloud_files:
+  for key in sorted(cloud_files):
     ts=str(key)
     findCloudPose(ts)
     file_name = "cloud_"+str(frame_count).zfill(8)+".bin"
